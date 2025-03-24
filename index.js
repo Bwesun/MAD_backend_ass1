@@ -60,7 +60,7 @@ app.put('/students/:id', async (req, res) => {
 app.delete('/students/:id', async (req, res) => {
   try {
     await Student.findByIdAndDelete(req.params.id);
-    res.send({ message: 'Student deleted successfully!' });
+    res.send({ message: 'Student ${req.params.id} deleted successfully!' });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
