@@ -13,8 +13,8 @@ mongoose.connect(process.env.MONGO_URI)
 .catch(err => console.error('MongoDB error:', err));
 
 // Welcome Route
-app.get('/', (req, res) => {
-  res.send('Welcome to Day 5 Assignment!');
+app.get('/welcome', (req, res) => {
+  res.send('Welcome to Day 5!');
 });
 
 // Student Routes
